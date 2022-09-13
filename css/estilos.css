@@ -1,0 +1,388 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Para que Funcione el 1rem = 10px */
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+body {
+    font-size: 1.6rem; /* Poner por default 16px en todo el documento */
+    line-height: 1.5;
+}
+h1,h2,h3 {
+    margin: 0 0 5rem 0;
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+p{
+    font-size: 2rem;
+}
+
+/* Genericos */
+.texto-centrado {
+    text-align: center;
+}
+/** Ventana Emergente **/
+.ventana {
+    background-color: #037bc0;
+    width: 30%;
+    color: #e1e1e1;
+    font-size: 1rem;
+    text-align: center;
+    padding: 3.3rem;
+    min-height: 20.5rem;
+    border-radius: 2.2rem;
+    position: absolute;
+    left: 34%;
+    top: 45%;
+    display: none;
+}
+/*  Texto de la ventana */
+.texto-emergente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Globales */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.contenedorX {
+    max-width: 120rem;
+    margin: 5rem auto;
+}
+.contenido-principal {
+    margin-top: 3rem;
+}
+.btn {
+    display: block;
+    background-color: #154360;
+    border-radius: .5rem;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: .5rem;
+    margin: 2rem;
+    transition: background-color .3s ease-out;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.btn:hover{
+    background-color: #2980B9 ;
+}
+
+/* Estilos de Login */
+.login {
+    width: 50rem;
+    margin: 0 auto;
+}
+.login legend{
+    background-color: #037bc0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .8rem;
+    margin-bottom: 4rem;
+}
+.campo{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+.campo label{
+    flex-basis: 10rem;
+}
+.campo input {
+    max-width: 100%;
+}
+/* Estilos Home */
+
+/* Texto Principal o Superior */
+.texto-principal {
+    margin: 5rem 0;
+    text-align: center;
+}
+.texto-principal span {
+    color: #F1C40F;
+}
+
+/* Navegacion */
+.contenedor-navegacion {
+    border-top: .1rem solid #1e1e1e1e;
+}
+.principal-navegacion {
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.principal-navegacion a:hover{
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+}
+
+/* Banner Principal */
+.hero {
+    background-image: url(../assets/banner.jpg);
+    height: 55rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Categorias Styles */
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.categorias h2{
+    text-align: center;
+}
+.categorias {
+    margin: 2rem auto;
+}
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #ffffff;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Estilos de la tienda */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    gap: 1rem;
+}
+.contenedor-productos .producto:nth-child(1) {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.contenedor-productos .producto:nth-child(2) {
+    grid-column: 1 / 4;
+}
+.contenedor-productos .producto:nth-child(3) {
+    grid-column: 4/ 7;
+}
+.contenedor-productos .producto:nth-child(4) {
+    grid-column: 1/ 3;
+}
+.contenedor-productos .producto:nth-child(5) {
+    grid-column: 3/ 5;
+}
+.contenedor-productos .producto:nth-child(6) {
+    grid-column: 5/ 7;
+}
+/* Estilos de las imagenes */
+.contenedor-productos .producto:nth-child(1) img{
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contenedor-productos .producto:nth-child(2) img,
+.contenedor-productos .producto:nth-child(3) img,
+.contenedor-productos .producto:nth-child(4) img,
+.contenedor-productos .producto:nth-child(5) img,
+.contenedor-productos .producto:nth-child(6) img{
+    height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto{
+    background-color: #F1C40F;
+}
+.texto-producto h3{
+    margin: 0;
+}
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+.texto-producto {
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+/* Seccion de Footer */
+.footerX {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footerX .foot:nth-child(1) a,
+.footerX .foot:nth-child(2) a{
+    display: block;
+}
+.foot h3{
+    margin: 1rem 0rem;
+}
+
+/* Estilos de Galeria */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 1rem;
+}
+
+/* Estilos de Registro */
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset {
+    border:  1px solid black;
+    margin-bottom: 2rem;
+}
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .8rem;
+    margin-bottom: 4rem;
+}
+.campo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+.campo label{
+    flex-basis: 10rem;
+}
+.campo input:not( [type="radio"]),
+.campo select,
+.campo textarea {
+    flex: 2;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+/* Estilos dashboard de Administrador */
+.listado-bloques{
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.blocke1 h3{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.blocke2 h3{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.blocke3 h3{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.blocke1{
+    display: block;
+    background: #F1C40F;
+    border-radius: .5rem;
+    color: white;
+    padding: 1rem;
+}
+.blocke2{
+    background: #2980B9;
+    border-radius: .5rem;
+    color: white;
+    padding: 1rem;
+}
+.blocke3{
+    background: #C0392B ;
+    border-radius: .5rem;
+    color: white;
+    padding: 1rem;
+}
+
+/* ----- Estilos del carrito ------ */
+
+.submenu {
+    position: relative;
+}
+.submenu #carrito{
+    display: none; /* Quitamos el displey a Carrito o tabla */
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top:100%;
+
+    z-index: 1;
+    background-color: white;
+    padding: 2rem;
+    min-height: 50rem;
+    min-width: 50rem;
+}
+
+ul {
+    margin: 0rem 0rem;
+    list-style: none;
+}
+.separacion th{
+    padding: 2rem;
+}
+
+.u-full-width{
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.btnCarrito{
+    margin-top: 2rem;
+    width: 100%;
+    background: #037bc0;
+    color: white;
+}
+.btnCarrito:hover {
+    background: #154360;
+}
+.borrar {
+    background-color: red;
+    color: white;
+    border-radius: 1rem;
+    padding: .5rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}

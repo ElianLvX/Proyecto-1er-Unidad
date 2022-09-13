@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inicio - Login</title>
+</head>
+<body>
+    <head>
+        <h1 class="texto-principal">Tienda <span>Herramientas</span></h1>
+    </head>
+
+<main class="contenedor contenido-principal">
+    <form method="POST" action="validacion.php" class="login">
+
+        <fieldset>
+            <legend>Inicia Sesion</legend>
+
+            <div class="campo">
+                <label for="usuario">Usuario: </label>
+                <input id="usuario" type="text" name="usuario" placeholder="Tu Usuario" required>
+            </div>
+
+            <div class="campo">
+                <label for="contrasena">Password: </label>
+                <input id="contrasena" type="password" name="pass" placeholder="Tu Contraseña" required>
+            </div>
+        </fieldset>
+        
+        <input type="submit" value="Enviar" class="btn">
+    </form>
+</main>
+</body>
+</html>
